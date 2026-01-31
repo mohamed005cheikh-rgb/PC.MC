@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche PCM Mauritanie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-header">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>PCM Mauritanie</span>
+                </div>
+                <div class="subtitle">Recherche instantanée du Plan Comptable Mauritanien</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Rechercher par code (ex: 100) ou par intitulé (ex: Capital)..."
+                        autocomplete="off"
+                        autofocus
+                    >
+                    <button id="clear-search" class="clear-btn" title="Effacer la recherche">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-hint">
+                    <span class="hint-text">
+                        <i class="fas fa-info-circle"></i>
+                        Tapez un code numérique ou un nom de compte pour filtrer instantanément
+                    </span>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="results-header">
+                    <h3 id="results-count">Chargement des comptes...</h3>
+                    <div class="sort-options">
+                        <button id="sort-by-code" class="sort-btn active" data-sort="code">
+                            <i class="fas fa-sort-numeric-down"></i> Trier par code
+                        </button>
+                        <button id="sort-by-name" class="sort-btn" data-sort="name">
+                            <i class="fas fa-sort-alpha-down"></i> Trier par nom
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="results-list" id="results-list">
+                    <!-- Les résultats de recherche s'afficheront ici dynamiquement -->
+                    <div class="loading-indicator">
+                        <div class="spinner"></div>
+                        <p>Chargement du Plan Comptable...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-detail" id="account-detail">
+                <div class="detail-header">
+                    <h3>Détails du compte</h3>
+                    <button id="close-detail" class="close-detail-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-placeholder">
+                        <i class="fas fa-file-invoice"></i>
+                        <p>Sélectionnez un compte pour voir les détails</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <i class="fas fa-book"></i>
+                        <span>PCM Mauritanie</span>
+                    </div>
+                    <p class="footer-description">Outil de recherche du Plan Comptable Général des Entreprises de Mauritanie</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp: <strong>+22230726475</strong></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Pour toute question sur le Plan Comptable</span>
+                    </div>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>À propos</h4>
+                    <p>Cet outil permet une recherche instantanée dans le Plan Comptable Mauritanien (PCM). Recherchez par code de compte ou par intitulé pour obtenir rapidement la définition et les règles associées.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PCM Mauritanie - Recherche instantanée. Tous droits réservés pour :MC.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
